@@ -88,6 +88,11 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 
+input type:touchpad {
+    tap enabled
+    natural_scroll disabled
+}
+
 bar {
   swaybar_command waybar
 

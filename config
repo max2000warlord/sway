@@ -5,6 +5,7 @@ set $down  j
 set $up    k 
 set $right l 
 set $term  alacritty
+set $browser brave
 set $menu  exec tofi-drun | xargs swaymsg exec --
 
 font pango:Hack Nerd Font 12
@@ -17,11 +18,13 @@ font pango:Hack Nerd Font 12
 # common bindings
 bindsym $mod+x exec $term
 bindsym $mod+d exec $menu
+bindsym $mod+c exec $browser
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit Sway?' -B 'Yes, exit sway' 'swaymsg exit' --font="Iosevka Nerd Font"
 bindsym $mod+n exec --no-startup-id alacritty -t nm_tui_win -e "nmtui"
-bindsym $mod+p exec grim -g "$(slurp -d)" - | wl-copy
+bindsym $mod+p exec grim -g "$(slurp)" ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png
+bindsym $mod+Shift+p exec grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png
 floating_modifier $mod normal
 
 
@@ -90,7 +93,7 @@ mode "resize" {
 
 input type:touchpad {
     tap enabled
-    natural_scroll disabled
+    natural_scroll enabled
 }
 
 bar {

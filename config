@@ -25,6 +25,7 @@ bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit Sway?' -B 'Yes, exit sway'
 bindsym $mod+n exec --no-startup-id alacritty -t nm_tui_win -e "nmtui"
 bindsym $mod+p exec grim -g "$(slurp)" ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png
 bindsym $mod+Shift+p exec grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png
+bindsym $mod+Shift+Space exec /usr/bin/1password --quick-access
 floating_modifier $mod normal
 
 

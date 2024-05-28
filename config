@@ -11,13 +11,14 @@ set $nvgui neovide
 set $menu  exec tofi-drun | xargs swaymsg exec --
 
 font pango:Hack Nerd Font 12
-
+exec_always --no-startup-id nm-applet
+exec  swww-daemon
 # Start kwalletd5
 exec --no-startup-id /usr/bin/kwalletd5
-setenv QT_AUTO_SCREEN_SCALE_FACTOR 1
-setenv KDE_SESSION_VERSION 5
-setenv KDE_FULL_SESSION true
-setenv XDG_CURRENT_DESKTOP KDE
+#setenv QT_AUTO_SCREEN_SCALE_FACTOR 1
+#setenv KDE_SESSION_VERSION 5
+#setenv KDE_FULL_SESSION true
+#setenv XDG_CURRENT_DESKTOP KDE
 
 # setting the solid.
 # output * bg #a89984 solid_color
